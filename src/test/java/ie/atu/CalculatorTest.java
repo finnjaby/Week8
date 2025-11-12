@@ -21,4 +21,8 @@ public class CalculatorTest {
     public void testSub_Success(){
         assertEquals(3,calc.sub(8,5));
     }
+    @Test
+    public void tesDiv_Success(){
+        assertEquals(4,calc.div(8,2));
+    }
 }
