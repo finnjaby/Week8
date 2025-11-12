@@ -45,4 +45,9 @@ public class CalculatorTest {
     public void testMulti_Success(){
         assertEquals(12,calc.multi(3,4));
     }
+    @Test
+    public void testMulti_Fail(){
+        Exception ex = assertThrows(ArithmeticException.class,()->calc.multi(Integer.MAX_VALUE,2));
+        assertEquals("Number cannot be greater than or equal to Integer.MAX_VALUE",ex.getMessage());
+    }
 }
