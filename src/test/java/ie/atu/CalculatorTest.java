@@ -22,7 +22,11 @@ public class CalculatorTest {
         assertEquals(3,calc.sub(8,5));
     }
     @Test
-    public void tesDiv_Success(){
+    public void testDiv_Success(){
         assertEquals(4,calc.div(8,2));
+    }
+    @Test
+    public void testMulti_Success(){
+        assertEquals(12,calc.multi(3,4));
     }
 }
