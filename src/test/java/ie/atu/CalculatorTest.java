@@ -37,6 +37,11 @@ public class CalculatorTest {
         assertEquals(4,calc.div(8,2));
     }
     @Test
+    public void testDiv_Fail(){
+        Exception ex = assertThrows(ArithmeticException.class,()->calc.div(4,0));
+        assertEquals("Cannot divide by Zero.",ex.getMessage());
+    }
+    @Test
     public void testMulti_Success(){
         assertEquals(12,calc.multi(3,4));
     }

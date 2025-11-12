@@ -16,7 +16,10 @@ public class Calculator {
     }
 
     public int div(int firstNum, int secondNum) {
-        return firstNum / secondNum;
+        if(secondNum == 0)
+            throw new ArithmeticException("Cannot divide by Zero.");
+        int result = firstNum/secondNum;
+        return result;
     }
 
     public int multi(int firstNum, int secondNum) {
