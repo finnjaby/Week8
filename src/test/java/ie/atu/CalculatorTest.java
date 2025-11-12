@@ -17,4 +17,8 @@ public class CalculatorTest {
     public void testAdd_Success(){
         assertEquals(20, calc.add(16,4));
     }
+    @Test
+    public void testSub_Success(){
+        assertEquals(3,calc.sub(8,5));
+    }
 }
