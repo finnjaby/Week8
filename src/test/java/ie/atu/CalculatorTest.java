@@ -28,6 +28,11 @@ public class CalculatorTest {
         assertEquals(3,calc.sub(8,5));
     }
     @Test
+    public void testSub_Fail(){
+        Exception ex = assertThrows(ArithmeticException.class,()->calc.sub(Integer.MIN_VALUE,1));
+        assertEquals("Number cannot be smaller than or equal to Integer.MIN_VALUE",ex.getMessage());
+    }
+    @Test
     public void testDiv_Success(){
         assertEquals(4,calc.div(8,2));
     }

@@ -9,7 +9,10 @@ public class Calculator {
     }
 
     public int sub(int firstNum, int secondNum) {
-        return firstNum - secondNum;
+        if(firstNum <= Integer.MIN_VALUE || secondNum <= Integer.MIN_VALUE)
+            throw new ArithmeticException("Number cannot be smaller than or equal to Integer.MIN_VALUE");
+        int result = firstNum - secondNum;
+        return result;
     }
 
     public int div(int firstNum, int secondNum) {
